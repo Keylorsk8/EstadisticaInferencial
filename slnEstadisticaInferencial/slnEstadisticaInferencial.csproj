@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CtluInicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtluInicio.Designer.cs">
+      <DependentUpon>CtluInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlUTablas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlUTablas.Designer.cs">
+      <DependentUpon>CtlUTablas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CtluInicio.resx">
+      <DependentUpon>CtluInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlUTablas.resx">
+      <DependentUpon>CtlUTablas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu Principal.resx">
       <DependentUpon>Menu Principal.cs</DependentUpon>
     </EmbeddedResource>

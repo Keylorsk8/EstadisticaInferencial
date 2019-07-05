@@ -10,16 +10,33 @@ using System.Windows.Forms;
 
 namespace slnEstadisticaInferencial
 {
-    public partial class Form1 : Form
+    public partial class FrmMenuPrincipal : Form
     {
-        public Form1()
+        public FrmMenuPrincipal()
         {
             InitializeComponent();
+            PnlSidePanel.Height = BtnInicio.Height;
+            PnlSidePanel.Top = BtnInicio.Top;
+            ctluInicio1.BringToFront();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void BtnInicio_Click(object sender, EventArgs e)
+        {
+            PnlSidePanel.Height = BtnInicio.Height;
+            PnlSidePanel.Top = BtnInicio.Top;
+            ctluInicio1.BringToFront();
+        }
+
+        private void BtnTablas_Click(object sender, EventArgs e)
+        {
+            PnlSidePanel.Height = BtnTablas.Height;
+            PnlSidePanel.Top = BtnTablas.Top;
+            ctlUTablas1.BringToFront();
         }
     }
 }
