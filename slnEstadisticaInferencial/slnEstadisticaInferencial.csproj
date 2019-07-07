@@ -33,8 +33,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,16 +57,101 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu Principal.cs">
+    <Compile Include="carnesDBDataSet.cs">
+      <DependentUpon>carnesDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="carnesDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>carnesDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CtluInicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtluInicio.Designer.cs">
+      <DependentUpon>CtluInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlUTablas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlUTablas.Designer.cs">
+      <DependentUpon>CtlUTablas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu Principal.Designer.cs">
-      <DependentUpon>Menu Principal.cs</DependentUpon>
+    <Compile Include="FrmAcercaDe.Designer.cs">
+      <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCarnes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCarnes.Designer.cs">
+      <DependentUpon>FrmCarnes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsumoPerCapita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsumoPerCapita.Designer.cs">
+      <DependentUpon>FrmConsumoPerCapita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicio.Designer.cs">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProducciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducciones.Designer.cs">
+      <DependentUpon>FrmProducciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\carnes.cs" />
+    <Compile Include="Models\CarnesContexto.cs" />
+    <Compile Include="Models\consumoPerCapita.cs" />
+    <Compile Include="Models\exportaciones.cs" />
+    <Compile Include="Models\producciones.cs" />
+    <Compile Include="FrmExportaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExportaciones.Designer.cs">
+      <DependentUpon>FrmExportaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procedimientos\FrmMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedimientos\FrmMedia.Designer.cs">
+      <DependentUpon>FrmMedia.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Menu Principal.resx">
-      <DependentUpon>Menu Principal.cs</DependentUpon>
+    <EmbeddedResource Include="CtluInicio.resx">
+      <DependentUpon>CtluInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlUTablas.resx">
+      <DependentUpon>CtlUTablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAcercaDe.resx">
+      <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCarnes.resx">
+      <DependentUpon>FrmCarnes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsumoPerCapita.resx">
+      <DependentUpon>FrmConsumoPerCapita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInicio.resx">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExportaciones.resx">
+      <DependentUpon>FrmExportaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProducciones.resx">
+      <DependentUpon>FrmProducciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procedimientos\FrmMedia.resx">
+      <DependentUpon>FrmMedia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +162,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="carnesDBDataSet.xsc">
+      <DependentUpon>carnesDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="carnesDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>carnesDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="carnesDBDataSet.xss">
+      <DependentUpon>carnesDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
