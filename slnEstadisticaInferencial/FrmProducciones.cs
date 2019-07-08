@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using slnEstadisticaInferencial.Procedimientos;
+using slnEstadisticaInferencial.Models;
 
 namespace slnEstadisticaInferencial
 {
@@ -49,6 +44,18 @@ namespace slnEstadisticaInferencial
         {
             Procedimientos.FrmMedia media = new Procedimientos.FrmMedia(2);
             media.ShowDialog();
+        }
+
+        private void BtnVarianza_Click(object sender, EventArgs e)
+        {
+            FrmVarianza varianza = new FrmVarianza(2);
+            varianza.ShowDialog();
+        }
+
+        private void BtnDesviacionEstandar_Click(object sender, EventArgs e)
+        {
+            FrmDesviacion desviacion = new FrmDesviacion(2);
+            desviacion.ShowDialog();
         }
     }
 }

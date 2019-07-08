@@ -50,8 +50,7 @@ namespace slnEstadisticaInferencial
         private void button4_Click(object sender, EventArgs e)
         {
             FrmAcercaDe frm = new FrmAcercaDe();
-            frm.Show();
-            frm.BringToFront();
+            frm.ShowDialog();
         }
     }
 }

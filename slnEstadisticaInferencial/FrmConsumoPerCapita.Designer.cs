@@ -87,8 +87,9 @@
             this.BtnDesviacionEstandar.Name = "BtnDesviacionEstandar";
             this.BtnDesviacionEstandar.Size = new System.Drawing.Size(157, 59);
             this.BtnDesviacionEstandar.TabIndex = 17;
-            this.BtnDesviacionEstandar.Text = "Calulcular\r\nDesviación Estandar\r\n";
+            this.BtnDesviacionEstandar.Text = "Calcular\r\nDesviación Estandar\r\n";
             this.BtnDesviacionEstandar.UseVisualStyleBackColor = false;
+            this.BtnDesviacionEstandar.Click += new System.EventHandler(this.BtnDesviacionEstandar_Click);
             // 
             // BtnVarianza
             // 
@@ -102,8 +103,9 @@
             this.BtnVarianza.Name = "BtnVarianza";
             this.BtnVarianza.Size = new System.Drawing.Size(157, 59);
             this.BtnVarianza.TabIndex = 16;
-            this.BtnVarianza.Text = "Calulcular\r\n Varianza";
+            this.BtnVarianza.Text = "Calcular\r\n Varianza";
             this.BtnVarianza.UseVisualStyleBackColor = false;
+            this.BtnVarianza.Click += new System.EventHandler(this.BtnVarianza_Click);
             // 
             // button3
             // 
@@ -117,7 +119,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(157, 59);
             this.button3.TabIndex = 15;
-            this.button3.Text = "Calulcular Media";
+            this.button3.Text = "Calcular Media";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

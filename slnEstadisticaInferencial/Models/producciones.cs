@@ -8,11 +8,8 @@ namespace slnEstadisticaInferencial.Models
 
     public partial class producciones
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idCarne { get; set; }
 
         public double cantidad { get; set; }

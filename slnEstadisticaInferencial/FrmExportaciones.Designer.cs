@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExportaciones));
             this.BtnVolver = new System.Windows.Forms.Button();
             this.PnlSideBar = new System.Windows.Forms.Panel();
+            this.BtnDesviacionEstandar = new System.Windows.Forms.Button();
             this.BtnVarianza = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.exportacionesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.exportacionesTableAdapter = new slnEstadisticaInferencial.carnesDBDataSetTableAdapters.exportacionesTableAdapter();
             this.PnlNavBar = new System.Windows.Forms.Panel();
-            this.BtnDesviacionEstandar = new System.Windows.Forms.Button();
             this.exportacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.exportacionesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.PnlSideBar.SuspendLayout();
@@ -103,6 +103,22 @@
             this.PnlSideBar.Size = new System.Drawing.Size(169, 554);
             this.PnlSideBar.TabIndex = 5;
             // 
+            // BtnDesviacionEstandar
+            // 
+            this.BtnDesviacionEstandar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnDesviacionEstandar.FlatAppearance.BorderSize = 0;
+            this.BtnDesviacionEstandar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDesviacionEstandar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDesviacionEstandar.ForeColor = System.Drawing.Color.White;
+            this.BtnDesviacionEstandar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnDesviacionEstandar.Location = new System.Drawing.Point(14, 400);
+            this.BtnDesviacionEstandar.Name = "BtnDesviacionEstandar";
+            this.BtnDesviacionEstandar.Size = new System.Drawing.Size(157, 59);
+            this.BtnDesviacionEstandar.TabIndex = 11;
+            this.BtnDesviacionEstandar.Text = "Calcular\r\nDesviación Estandar\r\n";
+            this.BtnDesviacionEstandar.UseVisualStyleBackColor = false;
+            this.BtnDesviacionEstandar.Click += new System.EventHandler(this.BtnDesviacionEstandar_Click);
+            // 
             // BtnVarianza
             // 
             this.BtnVarianza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -115,8 +131,9 @@
             this.BtnVarianza.Name = "BtnVarianza";
             this.BtnVarianza.Size = new System.Drawing.Size(157, 59);
             this.BtnVarianza.TabIndex = 10;
-            this.BtnVarianza.Text = "Calulcular\r\n Varianza";
+            this.BtnVarianza.Text = "Calcular\r\n Varianza";
             this.BtnVarianza.UseVisualStyleBackColor = false;
+            this.BtnVarianza.Click += new System.EventHandler(this.BtnVarianza_Click);
             // 
             // button4
             // 
@@ -146,7 +163,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(157, 59);
             this.button3.TabIndex = 9;
-            this.button3.Text = "Calulcular Media";
+            this.button3.Text = "Calcular Media";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -310,21 +327,6 @@
             this.PnlNavBar.Name = "PnlNavBar";
             this.PnlNavBar.Size = new System.Drawing.Size(906, 21);
             this.PnlNavBar.TabIndex = 11;
-            // 
-            // BtnDesviacionEstandar
-            // 
-            this.BtnDesviacionEstandar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BtnDesviacionEstandar.FlatAppearance.BorderSize = 0;
-            this.BtnDesviacionEstandar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDesviacionEstandar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDesviacionEstandar.ForeColor = System.Drawing.Color.White;
-            this.BtnDesviacionEstandar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDesviacionEstandar.Location = new System.Drawing.Point(14, 400);
-            this.BtnDesviacionEstandar.Name = "BtnDesviacionEstandar";
-            this.BtnDesviacionEstandar.Size = new System.Drawing.Size(157, 59);
-            this.BtnDesviacionEstandar.TabIndex = 11;
-            this.BtnDesviacionEstandar.Text = "Calulcular\r\nDesviación Estandar\r\n";
-            this.BtnDesviacionEstandar.UseVisualStyleBackColor = false;
             // 
             // FrmExportaciones
             // 

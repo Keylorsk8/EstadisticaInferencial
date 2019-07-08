@@ -47,8 +47,8 @@
             this.carnesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carnesTableAdapter = new slnEstadisticaInferencial.carnesDBDataSetTableAdapters.carnesTableAdapter();
             this.tableAdapterManager = new slnEstadisticaInferencial.carnesDBDataSetTableAdapters.TableAdapterManager();
-            this.ctlUTablas1 = new slnEstadisticaInferencial.CtlUTablas();
             this.ctluInicio1 = new slnEstadisticaInferencial.CtluInicio();
+            this.ctlUTablas1 = new slnEstadisticaInferencial.CtlUTablas();
             this.PnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carnesDBDataSet)).BeginInit();
@@ -240,6 +240,13 @@
             this.tableAdapterManager.carnesTableAdapter = this.carnesTableAdapter;
             this.tableAdapterManager.UpdateOrder = slnEstadisticaInferencial.carnesDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // ctluInicio1
+            // 
+            this.ctluInicio1.Location = new System.Drawing.Point(169, 142);
+            this.ctluInicio1.Name = "ctluInicio1";
+            this.ctluInicio1.Size = new System.Drawing.Size(906, 412);
+            this.ctluInicio1.TabIndex = 11;
+            // 
             // ctlUTablas1
             // 
             this.ctlUTablas1.Location = new System.Drawing.Point(169, 131);
@@ -247,26 +254,19 @@
             this.ctlUTablas1.Size = new System.Drawing.Size(906, 423);
             this.ctlUTablas1.TabIndex = 10;
             // 
-            // ctluInicio1
-            // 
-            this.ctluInicio1.Location = new System.Drawing.Point(169, 139);
-            this.ctluInicio1.Name = "ctluInicio1";
-            this.ctluInicio1.Size = new System.Drawing.Size(906, 412);
-            this.ctluInicio1.TabIndex = 11;
-            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 554);
-            this.Controls.Add(this.ctlUTablas1);
             this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.LblProyecto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PnlNavBar);
             this.Controls.Add(this.PnlSideBar);
             this.Controls.Add(this.ctluInicio1);
+            this.Controls.Add(this.ctlUTablas1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

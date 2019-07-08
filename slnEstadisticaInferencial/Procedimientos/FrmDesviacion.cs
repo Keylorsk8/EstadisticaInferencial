@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace slnEstadisticaInferencial.Procedimientos
 {
-    public partial class FrmMedia : Form
+    public partial class FrmDesviacion : Form
     {
         public int opcion = 0;
         Models.CarnesContexto contexto = new Models.CarnesContexto();
-
-        public FrmMedia(int op)
+        public FrmDesviacion(int op)
         {
             InitializeComponent();
             opcion = op;
             List<int> anios = new List<int>();
             List<int> aniosComparar = new List<int>();
+
             bool esta = false;
-             
+
             switch (opcion)
             {
                 case 1:
@@ -30,15 +30,16 @@ namespace slnEstadisticaInferencial.Procedimientos
                     List<Models.exportaciones> exportaciones = contexto.exportaciones.ToList();
                     foreach (var ex in exportaciones)
                     {
-                        if(anios.Count == 0)
+                        if (anios.Count == 0)
                         {
                             anios.Add(ex.anio);
                             aniosComparar.Add(ex.anio);
-                        }else
+                        }
+                        else
                         {
                             foreach (var anio in anios)
                             {
-                                if(anio == ex.anio)
+                                if (anio == ex.anio)
                                 {
                                     esta = true;
                                 }
@@ -55,9 +56,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             }
                         }
                     }
-                    llenarCombos(anios,aniosComparar);
+                    llenarCombos(anios, aniosComparar);
 
-                break;
+                    break;
                 case 2:
                     this.Text = "Producciones";
                     List<Models.producciones> producciones = contexto.producciones.ToList();
@@ -127,7 +128,7 @@ namespace slnEstadisticaInferencial.Procedimientos
             }
         }
 
-        private void llenarCombos(List<int> anios,List<int> aniosComparar)
+        private void llenarCombos(List<int> anios, List<int> aniosComparar)
         {
             cmbAnio1.DataSource = anios;
             cmbAnioComparar.DataSource = aniosComparar;
@@ -138,14 +139,6 @@ namespace slnEstadisticaInferencial.Procedimientos
             this.Close();
         }
 
-        private void FrmMedia_Load(object sender, EventArgs e)
-        {
-            chkComparar.Checked = false;
-            this.cmbAnioComparar.Enabled = false;
-            this.cmbAnioComparar.Visible = false;
-            this.lblComparar.Visible = false;
-        }
-
         private void chkComparar_CheckedChanged(object sender, EventArgs e)
         {
             if (this.chkComparar.Checked)
@@ -153,7 +146,8 @@ namespace slnEstadisticaInferencial.Procedimientos
                 this.cmbAnioComparar.Enabled = true;
                 this.cmbAnioComparar.Visible = true;
                 this.lblComparar.Visible = true;
-            }else
+            }
+            else
             {
                 this.cmbAnioComparar.Enabled = false;
                 this.cmbAnioComparar.Visible = false;
@@ -161,7 +155,15 @@ namespace slnEstadisticaInferencial.Procedimientos
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void FrmDesviacion_Load(object sender, EventArgs e)
+        {
+            chkComparar.Checked = false;
+            this.cmbAnioComparar.Enabled = false;
+            this.cmbAnioComparar.Visible = false;
+            this.lblComparar.Visible = false;
+        }
+
+        private void BtnDesviacion_Click(object sender, EventArgs e)
         {
             switch (opcion)
             {
@@ -187,19 +189,30 @@ namespace slnEstadisticaInferencial.Procedimientos
                         }
                         media = media / exportaciones.Count();
 
+                        double sumatoria = 0.0;
+
+                        foreach (var ex in exportaciones)
+                        {
+                            sumatoria += Math.Pow((ex.cantidad - media), 2);
+                        }
+
+                        double varianza = sumatoria / (exportaciones.Count - 1);
+
+                        double desviacion = Math.Sqrt(varianza);
+
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Media");
+                        table.Columns.Add("Desviación Estandar");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Media de Exportaciones";
+                        row["Descripción"] = "Desviación Estandar de Exportaciones";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Media"] = media;
+                        row["Desviación Estandar"] = desviacion;
 
                         table.Rows.Add(row);
 
-                        DvgMedias.DataSource = table;
+                        DvgDesviaciones.DataSource = table;
                     }
                     else
                     {
@@ -222,6 +235,18 @@ namespace slnEstadisticaInferencial.Procedimientos
                         }
                         media = media / exportaciones.Count();
 
+                        double sumatoria = 0.0;
+
+                        foreach (var ex in exportaciones)
+                        {
+                            sumatoria += Math.Pow((ex.cantidad - media), 2);
+                        }
+
+                        double varianza = sumatoria / (exportaciones.Count - 1);
+
+                        double desviacion = Math.Sqrt(varianza);
+
+                        //Año a comparar: Las variables deben terminar en 2
                         List<Models.exportaciones> exportaciones2 = new List<Models.exportaciones>();
 
                         foreach (var ex in export)
@@ -238,27 +263,36 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media2 += ex.cantidad;
                         }
-                        media2 = media2 / exportaciones.Count();
+                        media2 = media2 / exportaciones2.Count();
+
+                        double sumatoria2 = 0.0;
+
+                        foreach (var ex in exportaciones2)
+                        {
+                            sumatoria2 += Math.Pow((ex.cantidad - media2), 2);
+                        }
+
+                        double varianza2 = sumatoria2 / (exportaciones2.Count - 1);
+
+                        double desviacion2 = Math.Sqrt(varianza2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Media");
+                        table.Columns.Add("Desviación Estandar");
                         table.Columns.Add("Año 2");
-                        table.Columns.Add("Media 2");
-                        table.Columns.Add("Diferencia");
+                        table.Columns.Add("Desviación Estandar 2");
 
                         DataRow row = table.NewRow();
                         row["Descripción"] = "Comparación de Exportaciones";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Media"] = media;
+                        row["Desviación Estandar"] = desviacion;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
-                        row["Media 2"] = media2;
-                        row["Diferencia"] = media - media2;
+                        row["Desviación Estandar 2"] = desviacion2;
 
                         table.Rows.Add(row);
 
-                        DvgMedias.DataSource = table; 
+                        DvgDesviaciones.DataSource = table;
 
                     }
                     break;
@@ -284,19 +318,30 @@ namespace slnEstadisticaInferencial.Procedimientos
                         }
                         media = media / producciones.Count();
 
+                        double sumatoria = 0.0;
+
+                        foreach (var ex in producciones)
+                        {
+                            sumatoria += Math.Pow((ex.cantidad - media), 2);
+                        }
+
+                        double varianza = sumatoria / (producciones.Count - 1);
+
+                        double desviacion = Math.Sqrt(varianza);
+
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Media");
+                        table.Columns.Add("Desviación Estandar");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Media de Producciones";
+                        row["Descripción"] = "Desviación Estandar de Producciones";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Media"] = media;
+                        row["Desviación Estandar"] = desviacion;
 
                         table.Rows.Add(row);
 
-                        DvgMedias.DataSource = table;
+                        DvgDesviaciones.DataSource = table;
                     }
                     else
                     {
@@ -319,6 +364,18 @@ namespace slnEstadisticaInferencial.Procedimientos
                         }
                         media = media / producciones.Count();
 
+                        double sumatoria = 0.0;
+
+                        foreach (var ex in producciones)
+                        {
+                            sumatoria += Math.Pow((ex.cantidad - media), 2);
+                        }
+
+                        double varianza = sumatoria / (producciones.Count - 1);
+
+                        double desviacion = Math.Sqrt(varianza);
+
+                        //Calcular segundo año: Las variables deben terminar en 2
                         List<Models.producciones> producciones2 = new List<Models.producciones>();
 
                         foreach (var pro in produc)
@@ -335,27 +392,36 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media2 += pro.cantidad;
                         }
-                        media2 = media2 / producciones.Count();
+                        media2 = media2 / producciones2.Count();
+
+                        double sumatoria2 = 0.0;
+
+                        foreach (var ex in producciones2)
+                        {
+                            sumatoria2 += Math.Pow((ex.cantidad - media2), 2);
+                        }
+
+                        double varianza2 = sumatoria2 / (producciones2.Count - 1);
+
+                        double desviacion2 = Math.Sqrt(varianza2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Media");
+                        table.Columns.Add("Desviación Estandar");
                         table.Columns.Add("Año 2");
-                        table.Columns.Add("Media 2");
-                        table.Columns.Add("Diferencia");
+                        table.Columns.Add("Desviación Estandar 2");
 
                         DataRow row = table.NewRow();
                         row["Descripción"] = "Comparación de Producciones";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Media"] = media;
+                        row["Desviación Estandar"] = desviacion;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
-                        row["Media 2"] = media2;
-                        row["Diferencia"] = media - media2;
+                        row["Desviación Estandar 2"] = desviacion2;
 
                         table.Rows.Add(row);
 
-                        DvgMedias.DataSource = table;
+                        DvgDesviaciones.DataSource = table;
 
                     }
                     break;
@@ -381,19 +447,30 @@ namespace slnEstadisticaInferencial.Procedimientos
                         }
                         media = media / consumoPerCapita.Count();
 
+                        double sumatoria = 0.0;
+
+                        foreach (var ex in consumoPerCapita)
+                        {
+                            sumatoria += Math.Pow((ex.cantidad - media), 2);
+                        }
+
+                        double varianza = sumatoria / (consumoPerCapita.Count - 1);
+
+                        double desviacion = Math.Sqrt(varianza);
+
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Media");
+                        table.Columns.Add("Desviación Estandar");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Media de ConsumoPerCapita";
+                        row["Descripción"] = "Desviación Estandar de Consumo Per Capita";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Media"] = media;
+                        row["Desviación Estandar"] = desviacion;
 
                         table.Rows.Add(row);
 
-                        DvgMedias.DataSource = table;
+                        DvgDesviaciones.DataSource = table;
                     }
                     else
                     {
@@ -416,6 +493,18 @@ namespace slnEstadisticaInferencial.Procedimientos
                         }
                         media = media / consumoPerCapita.Count();
 
+                        double sumatoria = 0.0;
+
+                        foreach (var ex in consumoPerCapita)
+                        {
+                            sumatoria += Math.Pow((ex.cantidad - media), 2);
+                        }
+
+                        double varianza = sumatoria / (consumoPerCapita.Count - 1);
+
+                        double desviacion = Math.Sqrt(varianza);
+
+                        //Calculo de segundo año: Las variables deben terminar en 2
                         List<Models.consumoPerCapita> consumoPerCapita2 = new List<Models.consumoPerCapita>();
 
                         foreach (var con in consu)
@@ -432,42 +521,41 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media2 += con.cantidad;
                         }
-                        media2 = media2 / consumoPerCapita.Count();
+                        media2 = media2 / consumoPerCapita2.Count();
+
+                        double sumatoria2 = 0.0;
+
+                        foreach (var ex in consumoPerCapita2)
+                        {
+                            sumatoria2 += Math.Pow((ex.cantidad - media2), 2);
+                        }
+
+                        double varianza2 = sumatoria2 / (consumoPerCapita2.Count - 1);
+
+                        double desviacion2 = Math.Sqrt(varianza2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Media");
+                        table.Columns.Add("Desviación Estandar");
                         table.Columns.Add("Año 2");
-                        table.Columns.Add("Media 2");
-                        table.Columns.Add("Diferencia");
+                        table.Columns.Add("Desviación Estandar 2");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Comparación de ConsumoPerCapita";
+                        row["Descripción"] = "Comparación de Consumo Per Capita";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Media"] = media;
+                        row["Desviación Estandar"] = desviacion;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
-                        row["Media 2"] = media2;
-                        row["Diferencia"] = media - media2;
+                        row["Desviación Estandar 2"] = desviacion2;
 
                         table.Rows.Add(row);
 
-                        DvgMedias.DataSource = table;
+                        DvgDesviaciones.DataSource = table;
 
                     }
 
                     break;
             }
-        }
-
-        private void cmbAnioComparar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
