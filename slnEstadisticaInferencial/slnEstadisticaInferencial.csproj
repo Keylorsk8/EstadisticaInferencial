@@ -118,11 +118,23 @@
     <Compile Include="FrmExportaciones.Designer.cs">
       <DependentUpon>FrmExportaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procedimientos\FrmDesviacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedimientos\FrmDesviacion.Designer.cs">
+      <DependentUpon>FrmDesviacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procedimientos\FrmMedia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procedimientos\FrmMedia.Designer.cs">
       <DependentUpon>FrmMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procedimientos\FrmVarianza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedimientos\FrmVarianza.Designer.cs">
+      <DependentUpon>FrmVarianza.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,8 +162,14 @@
     <EmbeddedResource Include="FrmProducciones.resx">
       <DependentUpon>FrmProducciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procedimientos\FrmDesviacion.resx">
+      <DependentUpon>FrmDesviacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procedimientos\FrmMedia.resx">
       <DependentUpon>FrmMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procedimientos\FrmVarianza.resx">
+      <DependentUpon>FrmVarianza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

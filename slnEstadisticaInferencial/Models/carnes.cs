@@ -27,6 +27,7 @@ namespace slnEstadisticaInferencial.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<exportaciones> exportaciones { get; set; }
 
-        public virtual producciones producciones { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual  ICollection<producciones> producciones { get; set; }
     }
 }

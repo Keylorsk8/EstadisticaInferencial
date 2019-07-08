@@ -13,7 +13,6 @@ namespace slnEstadisticaInferencial.Models
         }
 
 
-
         public virtual DbSet<carnes> carnes { get; set; }
         public virtual DbSet<consumoPerCapita> consumoPerCapita { get; set; }
         public virtual DbSet<exportaciones> exportaciones { get; set; }
@@ -38,8 +37,10 @@ namespace slnEstadisticaInferencial.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<carnes>()
-                .HasOptional(e => e.producciones)
-                .WithRequired(e => e.carnes);
+                 .HasMany(e => e.producciones)
+                 .WithRequired(e => e.carnes)
+                 .HasForeignKey(e => e.idCarne)
+                 .WillCascadeOnDelete(false);           
         }
     }
 }

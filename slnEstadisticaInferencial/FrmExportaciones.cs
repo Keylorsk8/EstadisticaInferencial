@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using slnEstadisticaInferencial.Procedimientos;
 
 namespace slnEstadisticaInferencial
 {
@@ -31,17 +32,12 @@ namespace slnEstadisticaInferencial
             this.Validate();
             this.exportacionesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.carnesDBDataSet);
-
         }
 
         private void FrmExportaciones_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'carnesDBDataSet1.exportaciones' Puede moverla o quitarla según sea necesario.
             this.exportacionesTableAdapter.Fill(this.carnesDBDataSet1.exportaciones);
-            // TODO: esta línea de código carga datos en la tabla 'carnesDBDataSet.exportaciones' Puede moverla o quitarla según sea necesario.
-            //this.exportacionesTableAdapter.Fill(this.carnesDBDataSet.exportaciones);
-
-
         }
 
         private void BtnInsertar_Click(object sender, EventArgs e)
@@ -51,8 +47,20 @@ namespace slnEstadisticaInferencial
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Procedimientos.FrmMedia media = new Procedimientos.FrmMedia(1);
+            FrmMedia media = new FrmMedia(1);
             media.ShowDialog();
+        }
+
+        private void BtnVarianza_Click(object sender, EventArgs e)
+        {
+            FrmVarianza varianza = new FrmVarianza(1);
+            varianza.ShowDialog();
+        }
+
+        private void BtnDesviacionEstandar_Click(object sender, EventArgs e)
+        {
+            FrmDesviacion desviacion = new FrmDesviacion(1);
+            desviacion.ShowDialog();
         }
     }
 }
