@@ -1,7 +1,17 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="slnEstadisticaInferencial.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CarnesDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=carnesDB.mssql.somee.com;Integrated Security=False;User ID=keylorsk8_SQLLogin_1;Password=k88r6uger9;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False</Value>
+    </Setting>
+    <Setting Name="carnesDBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=carnesDB.mssql.somee.com;Initial Catalog=carnesDB;Persist Security Info=True;User ID=keylorsk8_SQLLogin_1;Password=k88r6uger9&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=carnesDB.mssql.somee.com;Initial Catalog=carnesDB;Persist Security Info=True;User ID=keylorsk8_SQLLogin_1;Password=k88r6uger9</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

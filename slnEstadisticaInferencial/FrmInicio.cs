@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace slnEstadisticaInferencial
 {
-    public partial class FrmMenuPrincipal : Form
+    public partial class FrmInicio : Form
     {
-        public FrmMenuPrincipal()
+        public FrmInicio()
         {
             InitializeComponent();
             PnlSidePanel.Height = BtnInicio.Height;
@@ -37,6 +37,20 @@ namespace slnEstadisticaInferencial
             PnlSidePanel.Height = BtnTablas.Height;
             PnlSidePanel.Top = BtnTablas.Top;
             ctlUTablas1.BringToFront();
+        }
+
+        private void carnesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.carnesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.carnesDBDataSet);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmAcercaDe frm = new FrmAcercaDe();
+            frm.ShowDialog();
         }
     }
 }
