@@ -47,6 +47,7 @@
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnInsertar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHipotesis = new System.Windows.Forms.Button();
             this.LblTitulo = new System.Windows.Forms.Label();
             this.carnesDBDataSet = new slnEstadisticaInferencial.carnesDBDataSet();
             this.produccionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -58,6 +59,7 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlNavBar = new System.Windows.Forms.Panel();
+            this.btnIntervalo = new System.Windows.Forms.Button();
             this.PnlSideBar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carnesDBDataSet)).BeginInit();
@@ -217,7 +219,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(14, 512);
+            this.button3.Location = new System.Drawing.Point(14, 503);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(29, 30);
             this.button3.TabIndex = 9;
@@ -318,6 +320,22 @@
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 4;
             // 
+            // btnHipotesis
+            // 
+            this.btnHipotesis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnHipotesis.FlatAppearance.BorderSize = 0;
+            this.btnHipotesis.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnHipotesis.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHipotesis.ForeColor = System.Drawing.Color.White;
+            this.btnHipotesis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHipotesis.Location = new System.Drawing.Point(888, 27);
+            this.btnHipotesis.Name = "btnHipotesis";
+            this.btnHipotesis.Size = new System.Drawing.Size(175, 33);
+            this.btnHipotesis.TabIndex = 18;
+            this.btnHipotesis.Text = "Prueba de Hipótesis";
+            this.btnHipotesis.UseVisualStyleBackColor = false;
+            this.btnHipotesis.Click += new System.EventHandler(this.btnHipotesis_Click);
+            // 
             // LblTitulo
             // 
             this.LblTitulo.AutoSize = true;
@@ -402,12 +420,30 @@
             this.PnlNavBar.Size = new System.Drawing.Size(906, 21);
             this.PnlNavBar.TabIndex = 13;
             // 
+            // btnIntervalo
+            // 
+            this.btnIntervalo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnIntervalo.FlatAppearance.BorderSize = 0;
+            this.btnIntervalo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnIntervalo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIntervalo.ForeColor = System.Drawing.Color.White;
+            this.btnIntervalo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIntervalo.Location = new System.Drawing.Point(704, 27);
+            this.btnIntervalo.Name = "btnIntervalo";
+            this.btnIntervalo.Size = new System.Drawing.Size(178, 33);
+            this.btnIntervalo.TabIndex = 18;
+            this.btnIntervalo.Text = "Intervalo Confianza";
+            this.btnIntervalo.UseVisualStyleBackColor = false;
+            this.btnIntervalo.Click += new System.EventHandler(this.btnIntervalo_Click);
+            // 
             // FrmProducciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 554);
+            this.Controls.Add(this.btnIntervalo);
+            this.Controls.Add(this.btnHipotesis);
             this.Controls.Add(this.PnlNavBar);
             this.Controls.Add(this.produccionesDataGridView);
             this.Controls.Add(this.LblTitulo);
@@ -457,5 +493,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnHipotesis;
+        private System.Windows.Forms.Button btnIntervalo;
     }
 }
