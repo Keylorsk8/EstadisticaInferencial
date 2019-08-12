@@ -92,7 +92,7 @@ namespace slnEstadisticaInferencial.Procedimientos
                     llenarCombos(anios, aniosComparar);
                     break;
                 case 3:
-                    this.Text = "Consumo Per Capita";
+                    this.Text = "Consumo Per Cápita";
                     List<Models.consumoPerCapita> consumoPerCapita = contexto.consumoPerCapita.ToList();
                     foreach (var ex in consumoPerCapita)
                     {
@@ -185,7 +185,10 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media += ex.cantidad;
                         }
-                        media = media / exportaciones.Count();
+
+                        double mediaSinRedondear = media / exportaciones.Count();
+
+                        media = Math.Round(mediaSinRedondear, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -220,7 +223,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media += ex.cantidad;
                         }
-                        media = media / exportaciones.Count();
+                        double mediaSinRedondear = media / exportaciones.Count();
+
+                        media = Math.Round(mediaSinRedondear, 2);
 
                         List<Models.exportaciones> exportaciones2 = new List<Models.exportaciones>();
 
@@ -238,7 +243,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media2 += ex.cantidad;
                         }
-                        media2 = media2 / exportaciones.Count();
+                        double mediaSinRedondear2 = media2 / exportaciones2.Count();
+
+                        media2 = Math.Round(mediaSinRedondear2, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -254,7 +261,7 @@ namespace slnEstadisticaInferencial.Procedimientos
                         row["Media"] = media;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
                         row["Media 2"] = media2;
-                        row["Diferencia"] = media - media2;
+                        row["Diferencia"] = Math.Round(media - media2,4);
 
                         table.Rows.Add(row);
 
@@ -282,7 +289,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media += pro.cantidad;
                         }
-                        media = media / producciones.Count();
+                        double mediaSinRedondear = media / producciones.Count();
+
+                        media = Math.Round(mediaSinRedondear, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -317,7 +326,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media += ex.cantidad;
                         }
-                        media = media / producciones.Count();
+                        double mediaSinRedondear = media / producciones.Count();
+
+                        media = Math.Round(mediaSinRedondear, 2);
 
                         List<Models.producciones> producciones2 = new List<Models.producciones>();
 
@@ -335,7 +346,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media2 += pro.cantidad;
                         }
-                        media2 = media2 / producciones.Count();
+                        double mediaSinRedondear2 = media2 / producciones2.Count();
+
+                        media2 = Math.Round(mediaSinRedondear2, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -351,7 +364,7 @@ namespace slnEstadisticaInferencial.Procedimientos
                         row["Media"] = media;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
                         row["Media 2"] = media2;
-                        row["Diferencia"] = media - media2;
+                        row["Diferencia"] = Math.Round(media - media2,4);
 
                         table.Rows.Add(row);
 
@@ -379,7 +392,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media += con.cantidad;
                         }
-                        media = media / consumoPerCapita.Count();
+                        double mediaSinRedondear = media / consumoPerCapita.Count();
+
+                        media = Math.Round(mediaSinRedondear, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -414,7 +429,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media += ex.cantidad;
                         }
-                        media = media / consumoPerCapita.Count();
+                        double mediaSinRedondear = media / consumoPerCapita.Count();
+
+                        media = Math.Round(mediaSinRedondear, 2);
 
                         List<Models.consumoPerCapita> consumoPerCapita2 = new List<Models.consumoPerCapita>();
 
@@ -432,7 +449,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                         {
                             media2 += con.cantidad;
                         }
-                        media2 = media2 / consumoPerCapita.Count();
+                        double mediaSinRedondear2 = media2 / consumoPerCapita2.Count();
+
+                        media2 = Math.Round(mediaSinRedondear2, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -443,12 +462,12 @@ namespace slnEstadisticaInferencial.Procedimientos
                         table.Columns.Add("Diferencia");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Comparación de ConsumoPerCapita";
+                        row["Descripción"] = "Comparación de Consumo Per Cápita";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
                         row["Media"] = media;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
                         row["Media 2"] = media2;
-                        row["Diferencia"] = media - media2;
+                        row["Diferencia"] = Math.Round(media - media2,4);
 
                         table.Rows.Add(row);
 

@@ -93,7 +93,7 @@ namespace slnEstadisticaInferencial.Procedimientos
                     llenarCombos(anios, aniosComparar);
                     break;
                 case 3:
-                    this.Text = "Consumo Per Capita";
+                    this.Text = "Consumo Per Cápita";
                     List<Models.consumoPerCapita> consumoPerCapita = contexto.consumoPerCapita.ToList();
                     foreach (var ex in consumoPerCapita)
                     {
@@ -181,7 +181,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             sumatoria += Math.Pow((ex.cantidad - media), 2);
                         }
 
-                        double varianza = sumatoria / (exportaciones.Count - 1);
+                        double varianzaSinReedondear = sumatoria / (exportaciones.Count - 1);
+
+                        double varianza = Math.Round(varianzaSinReedondear,2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -225,7 +227,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             sumatoria += Math.Pow((ex.cantidad - media), 2);
                         }
 
-                        double varianza = sumatoria / (exportaciones.Count - 1);
+                        double varianzaSinReedondear = sumatoria / (exportaciones.Count - 1);
+
+                        double varianza = Math.Round(varianzaSinReedondear,2);
 
 
                         //Año a comparar: Las variables deben terminar en 2
@@ -254,7 +258,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             sumatoria2 += Math.Pow((ex.cantidad - media2), 2);
                         }
 
-                        double varianza2 = sumatoria2 / (exportaciones2.Count - 1);
+                        double varianzaSinReedondear2 = sumatoria2 / (exportaciones.Count - 1);
+
+                        double varianza2 = Math.Round(varianzaSinReedondear2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -305,7 +311,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             sumatoria += Math.Pow((ex.cantidad - media), 2);
                         }
 
-                        double varianza = sumatoria / (producciones.Count - 1);
+                        double varianzaSinReedondear = sumatoria / (producciones.Count - 1);
+
+                        double varianza = Math.Round(varianzaSinReedondear,2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -349,7 +357,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             sumatoria += Math.Pow((ex.cantidad - media), 2);
                         }
 
-                        double varianza = sumatoria / (producciones.Count - 1);
+                        double varianzaSinReedondear = sumatoria / (producciones.Count - 1);
+
+                        double varianza = Math.Round(varianzaSinReedondear,2);
 
 
                         //Calcular segundo año: Las variables deben terminar en 2
@@ -378,7 +388,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             sumatoria2 += Math.Pow((ex.cantidad - media2), 2);
                         }
 
-                        double varianza2 = sumatoria2 / (producciones2.Count - 1);
+                        double varianzaSinReedondear2 = sumatoria2 / (producciones2.Count - 1);
+
+                        double varianza2 = Math.Round(varianzaSinReedondear2,2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -429,7 +441,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             sumatoria += Math.Pow((ex.cantidad - media), 2);
                         }
 
-                        double varianza = sumatoria / (consumoPerCapita.Count - 1);
+                        double varianzaSinReedondear = sumatoria / (consumoPerCapita.Count - 1);
+
+                        double varianza = Math.Round(varianzaSinReedondear,2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -473,7 +487,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             sumatoria += Math.Pow((ex.cantidad - media), 2);
                         }
 
-                        double varianza = sumatoria / (consumoPerCapita.Count - 1);
+                        double varianzaSinReedondear = sumatoria / (consumoPerCapita.Count - 1);
+
+                        double varianza = Math.Round(varianzaSinReedondear,2);
 
                         //Calculo de segundo año: Las variables deben terminar en 2
                         List<Models.consumoPerCapita> consumoPerCapita2 = new List<Models.consumoPerCapita>();
@@ -501,7 +517,9 @@ namespace slnEstadisticaInferencial.Procedimientos
                             sumatoria2 += Math.Pow((ex.cantidad - media2), 2);
                         }
 
-                        double varianza2 = sumatoria2 / (consumoPerCapita2.Count - 1);
+                        double varianzaSinReedondear2 = sumatoria2 / (consumoPerCapita2.Count - 1);
+
+                        double varianza2 = Math.Round(varianzaSinReedondear,2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
@@ -511,7 +529,7 @@ namespace slnEstadisticaInferencial.Procedimientos
                         table.Columns.Add("Varianza 2");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Comparación de Consumo Per Capita";
+                        row["Descripción"] = "Comparación de Consumo Per Cápita";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
                         row["Varianza"] = varianza;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
