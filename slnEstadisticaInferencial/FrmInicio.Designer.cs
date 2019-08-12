@@ -110,6 +110,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "xxxxxx";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             // 
             // button2
             // 
@@ -125,6 +126,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "xxxxxx";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // BtnSalir
             // 
