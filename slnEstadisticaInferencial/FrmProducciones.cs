@@ -2,6 +2,15 @@
 using System.Windows.Forms;
 using slnEstadisticaInferencial.Procedimientos;
 using slnEstadisticaInferencial.Models;
+using slnEstadisticaInferencial.Mantenimientos;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using slnEstadisticaInferencial.CRUD;
 
 namespace slnEstadisticaInferencial
 {
@@ -19,9 +28,17 @@ namespace slnEstadisticaInferencial
 
         private void FrmProducciones_Load(object sender, EventArgs e)
         {
+            Refrescar();
+        }
+        private void Refrescar()
+        {
             // TODO: esta línea de código carga datos en la tabla 'carnesDBDataSet.producciones' Puede moverla o quitarla según sea necesario.
-            this.produccionesTableAdapter.Fill(this.carnesDBDataSet.producciones);
+            Models.CarnesContexto contexto = new Models.CarnesContexto();
+            List<Models.producciones> producciones1 = contexto.producciones.ToList();
 
+           // this.produccionesTableAdapter.Fill(this.carnesDBDataSet.producciones);
+           produccionesDataGridView.DataSource = producciones1;
+          
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -68,6 +85,36 @@ namespace slnEstadisticaInferencial
         {
             FrmConfianza confianza = new FrmConfianza();
             confianza.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FrmManteProduccion produccion = new FrmManteProduccion();
+            produccion.accion = 1;
+            produccion.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmManteProduccion produccion = new FrmManteProduccion();
+            produccion.accion = 2;
+            producciones pro = ((producciones)produccionesDataGridView.SelectedRows[0].DataBoundItem);
+            produccion.id= pro.id;
+            produccion.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            producciones pro = ((producciones)produccionesDataGridView.SelectedRows[0].DataBoundItem);
+            ProduccionesLN proln = new ProduccionesLN();
+            proln.eliminaProduccion(pro.id);
+            MessageBox.Show("Se elimino correctamente su producción");
+            Refrescar();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Refrescar();
         }
     }
 }

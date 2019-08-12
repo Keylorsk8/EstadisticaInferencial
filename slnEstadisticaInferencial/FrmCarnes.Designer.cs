@@ -45,6 +45,7 @@
             this.PnlNavBar = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.carnesDataGridView = new System.Windows.Forms.DataGridView();
+            this.button8 = new System.Windows.Forms.Button();
             this.PnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carnesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carnesBindingSource)).BeginInit();
@@ -113,6 +114,7 @@
             this.BtnEliminar.TabIndex = 8;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnModificar
             // 
@@ -128,6 +130,7 @@
             this.BtnModificar.TabIndex = 7;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnInsertar
             // 
@@ -143,6 +146,7 @@
             this.BtnInsertar.TabIndex = 6;
             this.BtnInsertar.Text = "Insertar";
             this.BtnInsertar.UseVisualStyleBackColor = true;
+            this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
             // 
             // panel1
             // 
@@ -218,12 +222,30 @@
             this.carnesDataGridView.Size = new System.Drawing.Size(906, 479);
             this.carnesDataGridView.TabIndex = 6;
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(943, 31);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(109, 39);
+            this.button8.TabIndex = 20;
+            this.button8.Text = "Refrescar";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // FrmCarnesCopia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 554);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.PnlNavBar);
             this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.carnesDataGridView);
@@ -259,5 +281,6 @@
         private System.Windows.Forms.Panel PnlNavBar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridView carnesDataGridView;
+        private System.Windows.Forms.Button button8;
     }
 }

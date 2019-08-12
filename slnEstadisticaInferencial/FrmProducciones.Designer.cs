@@ -54,12 +54,13 @@
             this.produccionesTableAdapter = new slnEstadisticaInferencial.carnesDBDataSetTableAdapters.produccionesTableAdapter();
             this.tableAdapterManager = new slnEstadisticaInferencial.carnesDBDataSetTableAdapters.TableAdapterManager();
             this.produccionesDataGridView = new System.Windows.Forms.DataGridView();
+            this.PnlNavBar = new System.Windows.Forms.Panel();
+            this.btnIntervalo = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PnlNavBar = new System.Windows.Forms.Panel();
-            this.btnIntervalo = new System.Windows.Forms.Button();
             this.PnlSideBar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carnesDBDataSet)).BeginInit();
@@ -163,6 +164,7 @@
             this.button5.TabIndex = 14;
             this.button5.Text = "Eliminar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -178,6 +180,7 @@
             this.button6.TabIndex = 13;
             this.button6.Text = "Modificar";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -193,6 +196,7 @@
             this.button7.TabIndex = 12;
             this.button7.Text = "Insertar";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button2
             // 
@@ -329,7 +333,7 @@
             this.btnHipotesis.ForeColor = System.Drawing.Color.White;
             this.btnHipotesis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHipotesis.Location = new System.Drawing.Point(843, 26);
-            this.btnHipotesis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHipotesis.Margin = new System.Windows.Forms.Padding(2);
             this.btnHipotesis.Name = "btnHipotesis";
             this.btnHipotesis.Size = new System.Drawing.Size(174, 39);
             this.btnHipotesis.TabIndex = 18;
@@ -372,6 +376,7 @@
             // 
             // produccionesDataGridView
             // 
+            this.produccionesDataGridView.AllowUserToAddRows = false;
             this.produccionesDataGridView.AutoGenerateColumns = false;
             this.produccionesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.produccionesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -382,35 +387,12 @@
             this.dataGridViewTextBoxColumn3});
             this.produccionesDataGridView.DataSource = this.produccionesBindingSource;
             this.produccionesDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.produccionesDataGridView.Location = new System.Drawing.Point(169, 75);
+            this.produccionesDataGridView.Location = new System.Drawing.Point(169, 86);
+            this.produccionesDataGridView.MultiSelect = false;
             this.produccionesDataGridView.Name = "produccionesDataGridView";
-            this.produccionesDataGridView.Size = new System.Drawing.Size(906, 479);
+            this.produccionesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.produccionesDataGridView.Size = new System.Drawing.Size(906, 468);
             this.produccionesDataGridView.TabIndex = 12;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Tipo de Carne";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "cantidad";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "anio";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Año";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // PnlNavBar
             // 
@@ -430,7 +412,7 @@
             this.btnIntervalo.ForeColor = System.Drawing.Color.White;
             this.btnIntervalo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIntervalo.Location = new System.Drawing.Point(665, 26);
-            this.btnIntervalo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIntervalo.Margin = new System.Windows.Forms.Padding(2);
             this.btnIntervalo.Name = "btnIntervalo";
             this.btnIntervalo.Size = new System.Drawing.Size(174, 39);
             this.btnIntervalo.TabIndex = 18;
@@ -438,12 +420,55 @@
             this.btnIntervalo.UseVisualStyleBackColor = false;
             this.btnIntervalo.Click += new System.EventHandler(this.btnIntervalo_Click);
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(480, 26);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(109, 39);
+            this.button8.TabIndex = 19;
+            this.button8.Text = "Refrescar";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "carnes";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tipo de Carne";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "cantidad";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "anio";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Año";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
             // FrmProducciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 554);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.btnIntervalo);
             this.Controls.Add(this.btnHipotesis);
             this.Controls.Add(this.PnlNavBar);
@@ -480,10 +505,6 @@
         private carnesDBDataSetTableAdapters.produccionesTableAdapter produccionesTableAdapter;
         private carnesDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView produccionesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -497,5 +518,10 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnHipotesis;
         private System.Windows.Forms.Button btnIntervalo;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

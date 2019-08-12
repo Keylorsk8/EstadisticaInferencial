@@ -42,10 +42,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblTitulo = new System.Windows.Forms.Label();
             this.exportacionesDataGridView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exportacionesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.carnesDBDataSet1 = new slnEstadisticaInferencial.carnesDBDataSet();
             this.carnesDBDataSet = new slnEstadisticaInferencial.carnesDBDataSet();
@@ -57,6 +53,11 @@
             this.PnlNavBar = new System.Windows.Forms.Panel();
             this.exportacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.exportacionesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button8 = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exportacionesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exportacionesBindingSource3)).BeginInit();
@@ -181,6 +182,7 @@
             this.BtnEliminar.TabIndex = 8;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnModificar
             // 
@@ -196,6 +198,7 @@
             this.BtnModificar.TabIndex = 7;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnInsertar
             // 
@@ -252,34 +255,6 @@
             this.exportacionesDataGridView.Size = new System.Drawing.Size(906, 479);
             this.exportacionesDataGridView.TabIndex = 10;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Tipo de Carne";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // anioDataGridViewTextBoxColumn
-            // 
-            this.anioDataGridViewTextBoxColumn.DataPropertyName = "anio";
-            this.anioDataGridViewTextBoxColumn.HeaderText = "Año";
-            this.anioDataGridViewTextBoxColumn.Name = "anioDataGridViewTextBoxColumn";
-            this.anioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // exportacionesBindingSource3
             // 
             this.exportacionesBindingSource3.DataMember = "exportaciones";
@@ -328,12 +303,58 @@
             this.PnlNavBar.Size = new System.Drawing.Size(906, 21);
             this.PnlNavBar.TabIndex = 11;
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(933, 26);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(109, 39);
+            this.button8.TabIndex = 20;
+            this.button8.Text = "Refrescar";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "carnes";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Tipo de Carne";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // anioDataGridViewTextBoxColumn
+            // 
+            this.anioDataGridViewTextBoxColumn.DataPropertyName = "anio";
+            this.anioDataGridViewTextBoxColumn.HeaderText = "Año";
+            this.anioDataGridViewTextBoxColumn.Name = "anioDataGridViewTextBoxColumn";
+            this.anioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // FrmExportaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 554);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.PnlNavBar);
             this.Controls.Add(this.exportacionesDataGridView);
             this.Controls.Add(this.LblTitulo);
@@ -380,11 +401,12 @@
         private System.Windows.Forms.DataGridView exportacionesDataGridView;
         private carnesDBDataSet carnesDBDataSet1;
         private System.Windows.Forms.BindingSource exportacionesBindingSource3;
+        private System.Windows.Forms.Panel PnlNavBar;
+        private System.Windows.Forms.Button BtnDesviacionEstandar;
+        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Panel PnlNavBar;
-        private System.Windows.Forms.Button BtnDesviacionEstandar;
     }
 }

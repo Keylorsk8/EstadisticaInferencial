@@ -46,11 +46,12 @@
             this.consumoPerCapitaTableAdapter = new slnEstadisticaInferencial.carnesDBDataSetTableAdapters.consumoPerCapitaTableAdapter();
             this.tableAdapterManager = new slnEstadisticaInferencial.carnesDBDataSetTableAdapters.TableAdapterManager();
             this.consumoPerCapitaDataGridView = new System.Windows.Forms.DataGridView();
+            this.PnlNavBar = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PnlNavBar = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.PnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carnesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consumoPerCapitaBindingSource)).BeginInit();
@@ -137,6 +138,7 @@
             this.BtnEliminar.TabIndex = 14;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnModificar
             // 
@@ -152,6 +154,7 @@
             this.BtnModificar.TabIndex = 13;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnInsertar
             // 
@@ -167,6 +170,7 @@
             this.BtnInsertar.TabIndex = 12;
             this.BtnInsertar.Text = "Insertar";
             this.BtnInsertar.UseVisualStyleBackColor = true;
+            this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
             // 
             // BtnVolver
             // 
@@ -259,6 +263,15 @@
             this.consumoPerCapitaDataGridView.Size = new System.Drawing.Size(906, 492);
             this.consumoPerCapitaDataGridView.TabIndex = 13;
             // 
+            // PnlNavBar
+            // 
+            this.PnlNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PnlNavBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnlNavBar.Location = new System.Drawing.Point(169, 0);
+            this.PnlNavBar.Name = "PnlNavBar";
+            this.PnlNavBar.Size = new System.Drawing.Size(906, 21);
+            this.PnlNavBar.TabIndex = 14;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
@@ -268,7 +281,7 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "carnes";
             this.dataGridViewTextBoxColumn4.HeaderText = "Tipo de Carne";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
@@ -284,14 +297,22 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Año";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // PnlNavBar
+            // button8
             // 
-            this.PnlNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PnlNavBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlNavBar.Location = new System.Drawing.Point(169, 0);
-            this.PnlNavBar.Name = "PnlNavBar";
-            this.PnlNavBar.Size = new System.Drawing.Size(906, 21);
-            this.PnlNavBar.TabIndex = 14;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(941, 24);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(109, 33);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "Refrescar";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // FrmConsumoPerCapita
             // 
@@ -299,6 +320,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 554);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.PnlNavBar);
             this.Controls.Add(this.consumoPerCapitaDataGridView);
             this.Controls.Add(this.LblTitulo);
@@ -329,10 +351,6 @@
         private carnesDBDataSetTableAdapters.consumoPerCapitaTableAdapter consumoPerCapitaTableAdapter;
         private carnesDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView consumoPerCapitaDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Panel PnlNavBar;
         private System.Windows.Forms.Button BtnDesviacionEstandar;
         private System.Windows.Forms.Button BtnVarianza;
@@ -340,5 +358,10 @@
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Button BtnInsertar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button button8;
     }
 }

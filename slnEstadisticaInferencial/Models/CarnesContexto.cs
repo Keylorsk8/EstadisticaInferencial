@@ -8,7 +8,8 @@ namespace slnEstadisticaInferencial.Models
     public partial class CarnesContexto : DbContext
     {
         public CarnesContexto()
-            : base("data source=carnesDB.mssql.somee.com;initial catalog=carnesDB;persist security info=True;user id=keylorsk8_SQLLogin_1;password=k88r6uger9;MultipleActiveResultSets=True;App=EntityFramework")
+            //: base("name=CarnesContext")
+         : base("data source=carnesDB.mssql.somee.com;initial catalog=carnesDB;persist security info=True;user id=keylorsk8_SQLLogin_1;password=k88r6uger9;MultipleActiveResultSets=True;App=EntityFramework")
         {
         }
 
@@ -42,5 +43,7 @@ namespace slnEstadisticaInferencial.Models
                  .HasForeignKey(e => e.idCarne)
                  .WillCascadeOnDelete(false);           
         }
+        public void FixEProviderServicesProblem() { var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance; }
+
     }
 }

@@ -29,5 +29,10 @@ namespace slnEstadisticaInferencial.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual  ICollection<producciones> producciones { get; set; }
+
+        public override string ToString()
+        {
+            return nombre;
+        }
     }
 }

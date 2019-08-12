@@ -65,6 +65,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>carnesDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CRUD\CarneLN.cs" />
+    <Compile Include="CRUD\ConsumoPerCapitaLN.cs" />
+    <Compile Include="CRUD\exportacionesLN.cs" />
+    <Compile Include="CRUD\ProduccionesLN.cs" />
     <Compile Include="CtluInicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +110,30 @@
     </Compile>
     <Compile Include="FrmProducciones.Designer.cs">
       <DependentUpon>FrmProducciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmManteCarnes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmManteCarnes.Designer.cs">
+      <DependentUpon>FrmManteCarnes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmManteConsumoPerCapita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmManteConsumoPerCapita.Designer.cs">
+      <DependentUpon>FrmManteConsumoPerCapita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmManteExportaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmManteExportaciones.Designer.cs">
+      <DependentUpon>FrmManteExportaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmManteProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmManteProduccion.Designer.cs">
+      <DependentUpon>FrmManteProduccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\carnes.cs" />
     <Compile Include="Models\CarnesContexto.cs" />
@@ -174,6 +202,18 @@
     <EmbeddedResource Include="FrmProducciones.resx">
       <DependentUpon>FrmProducciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmManteCarnes.resx">
+      <DependentUpon>FrmManteCarnes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmManteConsumoPerCapita.resx">
+      <DependentUpon>FrmManteConsumoPerCapita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmManteExportaciones.resx">
+      <DependentUpon>FrmManteExportaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmManteProduccion.resx">
+      <DependentUpon>FrmManteProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procedimientos\FrmConfianza.resx">
       <DependentUpon>FrmConfianza.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,9 +263,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CRUD\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
