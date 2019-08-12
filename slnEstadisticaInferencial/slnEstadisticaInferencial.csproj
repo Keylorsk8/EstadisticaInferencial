@@ -118,11 +118,23 @@
     <Compile Include="FrmExportaciones.Designer.cs">
       <DependentUpon>FrmExportaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procedimientos\FrmConfianza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedimientos\FrmConfianza.Designer.cs">
+      <DependentUpon>FrmConfianza.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procedimientos\FrmDesviacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procedimientos\FrmDesviacion.Designer.cs">
       <DependentUpon>FrmDesviacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procedimientos\FrmHipotesis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedimientos\FrmHipotesis.Designer.cs">
+      <DependentUpon>FrmHipotesis.cs</DependentUpon>
     </Compile>
     <Compile Include="Procedimientos\FrmMedia.cs">
       <SubType>Form</SubType>
@@ -162,8 +174,14 @@
     <EmbeddedResource Include="FrmProducciones.resx">
       <DependentUpon>FrmProducciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procedimientos\FrmConfianza.resx">
+      <DependentUpon>FrmConfianza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procedimientos\FrmDesviacion.resx">
       <DependentUpon>FrmDesviacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procedimientos\FrmHipotesis.resx">
+      <DependentUpon>FrmHipotesis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procedimientos\FrmMedia.resx">
       <DependentUpon>FrmMedia.cs</DependentUpon>
@@ -204,6 +222,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CRUD\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

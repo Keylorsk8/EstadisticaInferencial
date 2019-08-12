@@ -62,5 +62,11 @@ namespace slnEstadisticaInferencial
             FrmDesviacion desviacion = new FrmDesviacion(1);
             desviacion.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmHipotesis hipotesis = new FrmHipotesis();
+            hipotesis.ShowDialog();
+        }
     }
 }

@@ -147,8 +147,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
+
             this.button4.Location = new System.Drawing.Point(19, 630);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
+
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(39, 37);
             this.button4.TabIndex = 9;
