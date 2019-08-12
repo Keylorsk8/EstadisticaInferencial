@@ -45,13 +45,13 @@
             this.lblmuestra = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlRespuesta = new System.Windows.Forms.Panel();
+            this.rTxtRespuesta = new System.Windows.Forms.RichTextBox();
+            this.lblMenor = new System.Windows.Forms.Label();
+            this.lblTStudent = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblMayor = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblTStudent = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblMenor = new System.Windows.Forms.Label();
-            this.rTxtRespuesta = new System.Windows.Forms.RichTextBox();
             this.PnlSideBar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlRespuesta.SuspendLayout();
@@ -257,6 +257,51 @@
             this.pnlRespuesta.Size = new System.Drawing.Size(809, 298);
             this.pnlRespuesta.TabIndex = 41;
             // 
+            // rTxtRespuesta
+            // 
+            this.rTxtRespuesta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rTxtRespuesta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTxtRespuesta.Location = new System.Drawing.Point(67, 225);
+            this.rTxtRespuesta.Name = "rTxtRespuesta";
+            this.rTxtRespuesta.Size = new System.Drawing.Size(721, 67);
+            this.rTxtRespuesta.TabIndex = 50;
+            this.rTxtRespuesta.Text = "";
+            // 
+            // lblMenor
+            // 
+            this.lblMenor.AutoSize = true;
+            this.lblMenor.BackColor = System.Drawing.Color.Transparent;
+            this.lblMenor.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenor.ForeColor = System.Drawing.Color.Black;
+            this.lblMenor.Location = new System.Drawing.Point(213, 133);
+            this.lblMenor.Name = "lblMenor";
+            this.lblMenor.Size = new System.Drawing.Size(0, 24);
+            this.lblMenor.TabIndex = 49;
+            // 
+            // lblTStudent
+            // 
+            this.lblTStudent.AutoSize = true;
+            this.lblTStudent.BackColor = System.Drawing.Color.Transparent;
+            this.lblTStudent.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTStudent.ForeColor = System.Drawing.Color.Black;
+            this.lblTStudent.Location = new System.Drawing.Point(86, 59);
+            this.lblTStudent.Name = "lblTStudent";
+            this.lblTStudent.Size = new System.Drawing.Size(63, 24);
+            this.lblTStudent.TabIndex = 48;
+            this.lblTStudent.Text = "3,747";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(48, 59);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 24);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "t : ";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -291,51 +336,6 @@
             this.label6.Size = new System.Drawing.Size(69, 24);
             this.label6.TabIndex = 39;
             this.label6.Text = "< m <";
-            // 
-            // lblTStudent
-            // 
-            this.lblTStudent.AutoSize = true;
-            this.lblTStudent.BackColor = System.Drawing.Color.Transparent;
-            this.lblTStudent.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTStudent.ForeColor = System.Drawing.Color.Black;
-            this.lblTStudent.Location = new System.Drawing.Point(86, 59);
-            this.lblTStudent.Name = "lblTStudent";
-            this.lblTStudent.Size = new System.Drawing.Size(63, 24);
-            this.lblTStudent.TabIndex = 48;
-            this.lblTStudent.Text = "3.747";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(48, 59);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 24);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "t : ";
-            // 
-            // lblMenor
-            // 
-            this.lblMenor.AutoSize = true;
-            this.lblMenor.BackColor = System.Drawing.Color.Transparent;
-            this.lblMenor.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenor.ForeColor = System.Drawing.Color.Black;
-            this.lblMenor.Location = new System.Drawing.Point(213, 133);
-            this.lblMenor.Name = "lblMenor";
-            this.lblMenor.Size = new System.Drawing.Size(0, 24);
-            this.lblMenor.TabIndex = 49;
-            // 
-            // rTxtRespuesta
-            // 
-            this.rTxtRespuesta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rTxtRespuesta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTxtRespuesta.Location = new System.Drawing.Point(67, 225);
-            this.rTxtRespuesta.Name = "rTxtRespuesta";
-            this.rTxtRespuesta.Size = new System.Drawing.Size(721, 67);
-            this.rTxtRespuesta.TabIndex = 50;
-            this.rTxtRespuesta.Text = "";
             // 
             // FrmConfianza
             // 

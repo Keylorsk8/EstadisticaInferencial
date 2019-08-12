@@ -79,9 +79,8 @@
             this.PnlSideBar.Controls.Add(this.panel1);
             this.PnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlSideBar.Location = new System.Drawing.Point(0, 0);
-            this.PnlSideBar.Margin = new System.Windows.Forms.Padding(4);
             this.PnlSideBar.Name = "PnlSideBar";
-            this.PnlSideBar.Size = new System.Drawing.Size(225, 682);
+            this.PnlSideBar.Size = new System.Drawing.Size(169, 554);
             this.PnlSideBar.TabIndex = 6;
             // 
             // panel2
@@ -98,9 +97,8 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(225, 682);
+            this.panel2.Size = new System.Drawing.Size(169, 554);
             this.panel2.TabIndex = 10;
             // 
             // BtnDesviacionEstandar
@@ -111,10 +109,9 @@
             this.BtnDesviacionEstandar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDesviacionEstandar.ForeColor = System.Drawing.Color.White;
             this.BtnDesviacionEstandar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDesviacionEstandar.Location = new System.Drawing.Point(19, 492);
-            this.BtnDesviacionEstandar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnDesviacionEstandar.Location = new System.Drawing.Point(14, 400);
             this.BtnDesviacionEstandar.Name = "BtnDesviacionEstandar";
-            this.BtnDesviacionEstandar.Size = new System.Drawing.Size(209, 108);
+            this.BtnDesviacionEstandar.Size = new System.Drawing.Size(157, 88);
             this.BtnDesviacionEstandar.TabIndex = 17;
             this.BtnDesviacionEstandar.Text = "Calcular \r\nDesviación Estándar\r\n";
             this.BtnDesviacionEstandar.UseVisualStyleBackColor = false;
@@ -128,10 +125,9 @@
             this.BtnVarianza.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVarianza.ForeColor = System.Drawing.Color.White;
             this.BtnVarianza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnVarianza.Location = new System.Drawing.Point(19, 412);
-            this.BtnVarianza.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnVarianza.Location = new System.Drawing.Point(14, 335);
             this.BtnVarianza.Name = "BtnVarianza";
-            this.BtnVarianza.Size = new System.Drawing.Size(209, 73);
+            this.BtnVarianza.Size = new System.Drawing.Size(157, 59);
             this.BtnVarianza.TabIndex = 16;
             this.BtnVarianza.Text = "Calcular\r\n Varianza";
             this.BtnVarianza.UseVisualStyleBackColor = false;
@@ -145,10 +141,9 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(19, 332);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(14, 270);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(209, 73);
+            this.button1.Size = new System.Drawing.Size(157, 59);
             this.button1.TabIndex = 15;
             this.button1.Text = "Calcular Media";
             this.button1.UseVisualStyleBackColor = false;
@@ -162,10 +157,9 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(19, 252);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Location = new System.Drawing.Point(14, 205);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(209, 73);
+            this.button5.Size = new System.Drawing.Size(157, 59);
             this.button5.TabIndex = 14;
             this.button5.Text = "Eliminar";
             this.button5.UseVisualStyleBackColor = true;
@@ -178,10 +172,9 @@
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(19, 172);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Location = new System.Drawing.Point(14, 140);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(209, 73);
+            this.button6.Size = new System.Drawing.Size(157, 59);
             this.button6.TabIndex = 13;
             this.button6.Text = "Modificar";
             this.button6.UseVisualStyleBackColor = true;
@@ -194,10 +187,9 @@
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(19, 92);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Location = new System.Drawing.Point(14, 75);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(209, 73);
+            this.button7.Size = new System.Drawing.Size(157, 59);
             this.button7.TabIndex = 12;
             this.button7.Text = "Insertar";
             this.button7.UseVisualStyleBackColor = true;
@@ -211,10 +203,9 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(19, 15);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(14, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 38);
+            this.button2.Size = new System.Drawing.Size(116, 31);
             this.button2.TabIndex = 0;
             this.button2.Text = "Volver";
             this.button2.UseVisualStyleBackColor = true;
@@ -228,12 +219,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-
-            this.button3.Location = new System.Drawing.Point(14, 503);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-
+            this.button3.Location = new System.Drawing.Point(10, 409);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(39, 37);
+            this.button3.Size = new System.Drawing.Size(29, 30);
             this.button3.TabIndex = 9;
             this.button3.Text = "?";
             this.button3.UseVisualStyleBackColor = true;
@@ -242,10 +230,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel3.Location = new System.Drawing.Point(244, 137);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(183, 111);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(267, 123);
+            this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 4;
             // 
             // BtnVolver
@@ -257,10 +244,9 @@
             this.BtnVolver.ForeColor = System.Drawing.Color.White;
             this.BtnVolver.Image = ((System.Drawing.Image)(resources.GetObject("BtnVolver.Image")));
             this.BtnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnVolver.Location = new System.Drawing.Point(19, 15);
-            this.BtnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnVolver.Location = new System.Drawing.Point(14, 12);
             this.BtnVolver.Name = "BtnVolver";
-            this.BtnVolver.Size = new System.Drawing.Size(155, 38);
+            this.BtnVolver.Size = new System.Drawing.Size(116, 31);
             this.BtnVolver.TabIndex = 0;
             this.BtnVolver.Text = "Volver";
             this.BtnVolver.UseVisualStyleBackColor = true;
@@ -274,10 +260,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(19, 630);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(14, 512);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(39, 37);
+            this.button4.Size = new System.Drawing.Size(29, 30);
             this.button4.TabIndex = 9;
             this.button4.Text = "?";
             this.button4.UseVisualStyleBackColor = true;
@@ -290,10 +275,9 @@
             this.BtnEliminar.ForeColor = System.Drawing.Color.White;
             this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(19, 306);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEliminar.Location = new System.Drawing.Point(14, 249);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(209, 73);
+            this.BtnEliminar.Size = new System.Drawing.Size(157, 59);
             this.BtnEliminar.TabIndex = 8;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
@@ -306,10 +290,9 @@
             this.BtnModificar.ForeColor = System.Drawing.Color.White;
             this.BtnModificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificar.Image")));
             this.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnModificar.Location = new System.Drawing.Point(19, 199);
-            this.BtnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnModificar.Location = new System.Drawing.Point(14, 162);
             this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(209, 73);
+            this.BtnModificar.Size = new System.Drawing.Size(157, 59);
             this.BtnModificar.TabIndex = 7;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
@@ -322,10 +305,9 @@
             this.BtnInsertar.ForeColor = System.Drawing.Color.White;
             this.BtnInsertar.Image = ((System.Drawing.Image)(resources.GetObject("BtnInsertar.Image")));
             this.BtnInsertar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInsertar.Location = new System.Drawing.Point(19, 92);
-            this.BtnInsertar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnInsertar.Location = new System.Drawing.Point(14, 75);
             this.BtnInsertar.Name = "BtnInsertar";
-            this.BtnInsertar.Size = new System.Drawing.Size(209, 73);
+            this.BtnInsertar.Size = new System.Drawing.Size(157, 59);
             this.BtnInsertar.TabIndex = 6;
             this.BtnInsertar.Text = "Insertar";
             this.BtnInsertar.UseVisualStyleBackColor = true;
@@ -333,23 +315,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel1.Location = new System.Drawing.Point(244, 137);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(183, 111);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 123);
+            this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 4;
             // 
             // btnHipotesis
             // 
-            this.btnHipotesis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnHipotesis.FlatAppearance.BorderSize = 0;
-            this.btnHipotesis.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnHipotesis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHipotesis.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnHipotesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHipotesis.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHipotesis.ForeColor = System.Drawing.Color.White;
             this.btnHipotesis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHipotesis.Location = new System.Drawing.Point(888, 27);
+            this.btnHipotesis.Location = new System.Drawing.Point(843, 26);
+            this.btnHipotesis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHipotesis.Name = "btnHipotesis";
-            this.btnHipotesis.Size = new System.Drawing.Size(175, 33);
+            this.btnHipotesis.Size = new System.Drawing.Size(174, 39);
             this.btnHipotesis.TabIndex = 18;
             this.btnHipotesis.Text = "Prueba de Hipótesis";
             this.btnHipotesis.UseVisualStyleBackColor = false;
@@ -360,10 +342,9 @@
             this.LblTitulo.AutoSize = true;
             this.LblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitulo.Location = new System.Drawing.Point(233, 30);
-            this.LblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTitulo.Location = new System.Drawing.Point(175, 24);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(338, 33);
+            this.LblTitulo.Size = new System.Drawing.Size(259, 24);
             this.LblTitulo.TabIndex = 11;
             this.LblTitulo.Text = "Listado de Producciones";
             this.LblTitulo.Click += new System.EventHandler(this.LblTitulo_Click);
@@ -401,10 +382,9 @@
             this.dataGridViewTextBoxColumn3});
             this.produccionesDataGridView.DataSource = this.produccionesBindingSource;
             this.produccionesDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.produccionesDataGridView.Location = new System.Drawing.Point(225, 92);
-            this.produccionesDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.produccionesDataGridView.Location = new System.Drawing.Point(169, 75);
             this.produccionesDataGridView.Name = "produccionesDataGridView";
-            this.produccionesDataGridView.Size = new System.Drawing.Size(1208, 590);
+            this.produccionesDataGridView.Size = new System.Drawing.Size(906, 479);
             this.produccionesDataGridView.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
@@ -436,23 +416,23 @@
             // 
             this.PnlNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.PnlNavBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlNavBar.Location = new System.Drawing.Point(225, 0);
-            this.PnlNavBar.Margin = new System.Windows.Forms.Padding(4);
+            this.PnlNavBar.Location = new System.Drawing.Point(169, 0);
             this.PnlNavBar.Name = "PnlNavBar";
-            this.PnlNavBar.Size = new System.Drawing.Size(1208, 26);
+            this.PnlNavBar.Size = new System.Drawing.Size(906, 21);
             this.PnlNavBar.TabIndex = 13;
             // 
             // btnIntervalo
             // 
-            this.btnIntervalo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnIntervalo.FlatAppearance.BorderSize = 0;
-            this.btnIntervalo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnIntervalo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnIntervalo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnIntervalo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIntervalo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIntervalo.ForeColor = System.Drawing.Color.White;
             this.btnIntervalo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIntervalo.Location = new System.Drawing.Point(704, 27);
+            this.btnIntervalo.Location = new System.Drawing.Point(665, 26);
+            this.btnIntervalo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIntervalo.Name = "btnIntervalo";
-            this.btnIntervalo.Size = new System.Drawing.Size(178, 33);
+            this.btnIntervalo.Size = new System.Drawing.Size(174, 39);
             this.btnIntervalo.TabIndex = 18;
             this.btnIntervalo.Text = "Intervalo Confianza";
             this.btnIntervalo.UseVisualStyleBackColor = false;
@@ -460,20 +440,17 @@
             // 
             // FrmProducciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-
             this.ClientSize = new System.Drawing.Size(1075, 554);
             this.Controls.Add(this.btnIntervalo);
             this.Controls.Add(this.btnHipotesis);
-
             this.Controls.Add(this.PnlNavBar);
             this.Controls.Add(this.produccionesDataGridView);
             this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.PnlSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmProducciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProducciones";

@@ -111,23 +111,23 @@ namespace slnEstadisticaInferencial.Procedimientos
 
         private void BtnConfianza_Click(object sender, EventArgs e)
         {
-            double promedio = Convert.ToDouble(lblPromedioX.Text);
-            double desviacion = Convert.ToDouble(lblDesviacion.Text);
-            int muestra = Convert.ToInt32(lblmuestra.Text);
+            double X = Convert.ToDouble(lblPromedioX.Text);
+            double O = Convert.ToDouble(lblDesviacion.Text);
+            int n = Convert.ToInt32(lblmuestra.Text);
             double t = Convert.ToDouble(lblTStudent.Text);
             double menor = 0;
         
-            menor = promedio - (t) * (desviacion / Math.Sqrt(muestra));
+            menor = X - ((t) * (O / Math.Sqrt(n)));
             lblMenor.Text = menor.ToString("N4");
 
             double mayor = 0;
 
-            mayor = promedio + (t) * (desviacion / Math.Sqrt(muestra));
+            mayor = X + ((t) * (O / Math.Sqrt(n)));
 
             lblMayor.Text = mayor.ToString("N4");
             
             rTxtRespuesta.Text = "La producción de carne del año " + cmbAnio1.SelectedValue +  " puede tener un 98% de " +
-                "confianza en que el promedio de todos los tipos de carnes está entre " + lblMenor.Text + " y " + lblMayor.Text;
+                "confianza en que el promedio de todos los tipos de carnes está entre " + Math.Round(Convert.ToDouble(lblMenor.Text),2) + " y " + Math.Round(Convert.ToDouble(lblMayor.Text), 2);
             
             pnlRespuesta.Visible = true;
         }
