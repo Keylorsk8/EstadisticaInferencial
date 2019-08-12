@@ -93,7 +93,7 @@ namespace slnEstadisticaInferencial.Procedimientos
                     llenarCombos(anios, aniosComparar);
                     break;
                 case 3:
-                    this.Text = "Consumo Per Capita";
+                    this.Text = "Consumo Per Cápita";
                     List<Models.consumoPerCapita> consumoPerCapita = contexto.consumoPerCapita.ToList();
                     foreach (var ex in consumoPerCapita)
                     {
@@ -198,17 +198,19 @@ namespace slnEstadisticaInferencial.Procedimientos
 
                         double varianza = sumatoria / (exportaciones.Count - 1);
 
-                        double desviacion = Math.Sqrt(varianza);
+                        double desviacionSinRedondear = Math.Sqrt(varianza);
+
+                        double desviacion = Math.Round(desviacionSinRedondear,2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Desviación Estandar");
+                        table.Columns.Add("Desviación Estándar");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Desviación Estandar de Exportaciones";
+                        row["Descripción"] = "Desviación Estándar de Exportaciones";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Desviación Estandar"] = desviacion;
+                        row["Desviación Estándar"] = desviacion;
 
                         table.Rows.Add(row);
 
@@ -274,21 +276,23 @@ namespace slnEstadisticaInferencial.Procedimientos
 
                         double varianza2 = sumatoria2 / (exportaciones2.Count - 1);
 
-                        double desviacion2 = Math.Sqrt(varianza2);
+                        double desviacionSinRedondear2 = Math.Sqrt(varianza2);
+
+                        double desviacion2 = Math.Round(desviacionSinRedondear2, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Desviación Estandar");
+                        table.Columns.Add("Desviación Estándar");
                         table.Columns.Add("Año 2");
-                        table.Columns.Add("Desviación Estandar 2");
+                        table.Columns.Add("Desviación Estándar 2");
 
                         DataRow row = table.NewRow();
                         row["Descripción"] = "Comparación de Exportaciones";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Desviación Estandar"] = desviacion;
+                        row["Desviación Estándar"] = desviacion;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
-                        row["Desviación Estandar 2"] = desviacion2;
+                        row["Desviación Estándar 2"] = desviacion2;
 
                         table.Rows.Add(row);
 
@@ -327,17 +331,19 @@ namespace slnEstadisticaInferencial.Procedimientos
 
                         double varianza = sumatoria / (producciones.Count - 1);
 
-                        double desviacion = Math.Sqrt(varianza);
+                        double desviacionSinRedondear = Math.Sqrt(varianza);
+
+                        double desviacion = Math.Round(desviacionSinRedondear, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Desviación Estandar");
+                        table.Columns.Add("Desviación Estándar");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Desviación Estandar de Producciones";
+                        row["Descripción"] = "Desviación Estándar de Producciones";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Desviación Estandar"] = desviacion;
+                        row["Desviación Estándar"] = desviacion;
 
                         table.Rows.Add(row);
 
@@ -373,7 +379,9 @@ namespace slnEstadisticaInferencial.Procedimientos
 
                         double varianza = sumatoria / (producciones.Count - 1);
 
-                        double desviacion = Math.Sqrt(varianza);
+                        double desviacionSinRedondear = Math.Sqrt(varianza);
+
+                        double desviacion = Math.Round(desviacionSinRedondear, 2);
 
                         //Calcular segundo año: Las variables deben terminar en 2
                         List<Models.producciones> producciones2 = new List<Models.producciones>();
@@ -403,21 +411,23 @@ namespace slnEstadisticaInferencial.Procedimientos
 
                         double varianza2 = sumatoria2 / (producciones2.Count - 1);
 
-                        double desviacion2 = Math.Sqrt(varianza2);
+                        double desviacionSinRedondear2 = Math.Sqrt(varianza2);
+
+                        double desviacion2 = Math.Round(desviacionSinRedondear2, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
-                        table.Columns.Add("Año");
-                        table.Columns.Add("Desviación Estandar");
-                        table.Columns.Add("Año 2");
-                        table.Columns.Add("Desviación Estandar 2");
+                        table.Columns.Add("Año " + cmbAnio1.SelectedValue);
+                        table.Columns.Add("Desviación Estándar");
+                        table.Columns.Add("Año " + cmbAnioComparar.SelectedValue);
+                        table.Columns.Add("Desviación Estándar 2");
 
                         DataRow row = table.NewRow();
                         row["Descripción"] = "Comparación de Producciones";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Desviación Estandar"] = desviacion;
+                        row["Desviación Estándar"] = desviacion;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
-                        row["Desviación Estandar 2"] = desviacion2;
+                        row["Desviación Estándar 2"] = desviacion2;
 
                         table.Rows.Add(row);
 
@@ -456,17 +466,19 @@ namespace slnEstadisticaInferencial.Procedimientos
 
                         double varianza = sumatoria / (consumoPerCapita.Count - 1);
 
-                        double desviacion = Math.Sqrt(varianza);
+                        double desviacionSinRedondear = Math.Sqrt(varianza);
+
+                        double desviacion = Math.Round(desviacionSinRedondear, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Desviación Estandar");
+                        table.Columns.Add("Desviación Estándar");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Desviación Estandar de Consumo Per Capita";
+                        row["Descripción"] = "Desviación Estándar de Consumo Per Cápita";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Desviación Estandar"] = desviacion;
+                        row["Desviación Estándar"] = desviacion;
 
                         table.Rows.Add(row);
 
@@ -502,7 +514,9 @@ namespace slnEstadisticaInferencial.Procedimientos
 
                         double varianza = sumatoria / (consumoPerCapita.Count - 1);
 
-                        double desviacion = Math.Sqrt(varianza);
+                        double desviacionSinRedondear = Math.Sqrt(varianza);
+
+                        double desviacion = Math.Round(desviacionSinRedondear, 2);
 
                         //Calculo de segundo año: Las variables deben terminar en 2
                         List<Models.consumoPerCapita> consumoPerCapita2 = new List<Models.consumoPerCapita>();
@@ -532,21 +546,23 @@ namespace slnEstadisticaInferencial.Procedimientos
 
                         double varianza2 = sumatoria2 / (consumoPerCapita2.Count - 1);
 
-                        double desviacion2 = Math.Sqrt(varianza2);
+                        double desviacionSinRedondear2 = Math.Sqrt(varianza2);
+
+                        double desviacion2 = Math.Round(desviacionSinRedondear2, 2);
 
                         DataTable table = new DataTable();
                         table.Columns.Add("Descripción");
                         table.Columns.Add("Año");
-                        table.Columns.Add("Desviación Estandar");
+                        table.Columns.Add("Desviación Estándar");
                         table.Columns.Add("Año 2");
-                        table.Columns.Add("Desviación Estandar 2");
+                        table.Columns.Add("Desviación Estándar 2");
 
                         DataRow row = table.NewRow();
-                        row["Descripción"] = "Comparación de Consumo Per Capita";
+                        row["Descripción"] = "Comparación de Consumo Per Cápita";
                         row["Año"] = cmbAnio1.SelectedValue.ToString();
-                        row["Desviación Estandar"] = desviacion;
+                        row["Desviación Estándar"] = desviacion;
                         row["Año 2"] = cmbAnioComparar.SelectedValue.ToString();
-                        row["Desviación Estandar 2"] = desviacion2;
+                        row["Desviación Estándar 2"] = desviacion2;
 
                         table.Rows.Add(row);
 
