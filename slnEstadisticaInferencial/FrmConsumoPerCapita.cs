@@ -43,8 +43,13 @@ namespace slnEstadisticaInferencial
 
         private void BtnDesviacionEstandar_Click(object sender, EventArgs e)
         {
-            FrmDesviacion desviacion = new FrmDesviacion(2);
+            FrmDesviacion desviacion = new FrmDesviacion(3);
             desviacion.ShowDialog();
+        }
+
+        private void LblTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
