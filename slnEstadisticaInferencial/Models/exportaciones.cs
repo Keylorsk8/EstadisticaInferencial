@@ -16,6 +16,7 @@ namespace slnEstadisticaInferencial.Models
 
         public int anio { get; set; }
 
+
         public virtual carnes carnes { get; set; }
     }
 }

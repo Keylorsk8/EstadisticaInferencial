@@ -68,20 +68,60 @@ namespace slnEstadisticaInferencial.Mantenimientos
 
         private void BtnAccion_Click(object sender, EventArgs e)
         {
+            string cadena = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-}{[]'/.;";
+            bool dontWork = false;
+           
+            
             if (accion == 1)
             {
-                cpcLN.GuardarConsumoPerCapita((int)cmbCarne.SelectedValue, Convert.ToDouble(textBox1.Text), (int)cmbAnio1.SelectedValue);
-                MessageBox.Show("Se guardo su Consumo Per Cápita correctamente");
+                for (int i = 0; i < textBox1.Text.Length; i++)
+                {
+                    for (int j = 0; j < cadena.Length; j++)
+                    {
+                        if (textBox1.Text[i].Equals(cadena[j]))
+                        {
+                            dontWork = true;
+                        }
+                    }
+                }
+                if (dontWork)
+                {
+                    MessageBox.Show(null,"Solo se aceptan valores enteros y decimales","Error", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    cpcLN.GuardarConsumoPerCapita((int)cmbCarne.SelectedValue, Convert.ToDouble(textBox1.Text), (int)cmbAnio1.SelectedValue);
+                    MessageBox.Show("Se guardó la Consumo Per Cápita correctamente");
+                    this.Close();
+                } 
+                
             }
             else
             {
                 if (accion == 2)
                 {
+                    for (int i = 0; i < textBox1.Text.Length; i++)
+                    {
+                        for (int j = 0; j < cadena.Length; j++)
+                        {
+                            if (textBox1.Text[i].Equals(cadena[j]))
+                            {
+                                dontWork = true;
+                            }
+                        }
+                    }
+                    if (dontWork)
+                    {
+                        MessageBox.Show(null, "Solo se aceptan valores enteros y decimales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                    else { 
                     cpcLN.actualizaConsumoPerCapita(id, (int)cmbCarne.SelectedValue, Convert.ToDouble(textBox1.Text), (int)cmbAnio1.SelectedValue);
-                    MessageBox.Show("Se actualizo su Consumo Per Cápita con exito!");
+                    MessageBox.Show("Se actualizó la Consumo Per Cápita con éxito!");
+                    this.Close();
+                    }
                 }
             }
-            this.Close();
         }
     }
 }

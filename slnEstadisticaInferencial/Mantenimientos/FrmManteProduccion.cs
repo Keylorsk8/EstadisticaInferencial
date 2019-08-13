@@ -69,21 +69,59 @@ namespace slnEstadisticaInferencial.Mantenimientos
 
         private void BtnAccion_Click(object sender, EventArgs e)
         {
+            string cadena = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-}{[]'/.;";
+            bool dontWork = false;
             if (accion == 1)
             {
-                produccionesLN.GuardarProduccion((int)cmbCarne.SelectedValue, Convert.ToDouble(maskedTextBox1.Text), (int)cmbAnio1.SelectedValue);
-                MessageBox.Show("Se creo su producción correctamente");
+                for (int i = 0; i < maskedTextBox1.Text.Length; i++)
+                {
+                    for (int j = 0; j < cadena.Length; j++)
+                    {
+                        if (maskedTextBox1.Text[i].Equals(cadena[j]))
+                        {
+                            dontWork = true;
+                        }
+                    }
+                }
+                if (dontWork)
+                {
+                    MessageBox.Show(null, "Solo se aceptan valores enteros y decimales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+
+                    produccionesLN.GuardarProduccion((int)cmbCarne.SelectedValue, Convert.ToDouble(maskedTextBox1.Text), (int)cmbAnio1.SelectedValue);
+                    MessageBox.Show("Se creo su producción correctamente");
+                }
             }
             else
             {
                 if (accion == 2)
                 {
-                    produccionesLN.actualizaProduccion(id,(int)cmbCarne.SelectedValue, Convert.ToDouble(maskedTextBox1.Text), (int)cmbAnio1.SelectedValue);
-                    MessageBox.Show("Se actualizo su producción con exito!");
+                    for (int i = 0; i < maskedTextBox1.Text.Length; i++)
+                    {
+                        for (int j = 0; j < cadena.Length; j++)
+                        {
+                            if (maskedTextBox1.Text[i].Equals(cadena[j]))
+                            {
+                                dontWork = true;
+                            }
+                        }
+                    }
+                    if (dontWork)
+                    {
+                        MessageBox.Show(null, "Solo se aceptan valores enteros y decimales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        produccionesLN.actualizaProduccion(id, (int)cmbCarne.SelectedValue, Convert.ToDouble(maskedTextBox1.Text), (int)cmbAnio1.SelectedValue);
+                        MessageBox.Show("Se actualizó su producción con éxito!");
+                    }
                 }
             }
             this.Close();
         }
+
 
         private void PnlSideBar_Paint(object sender, PaintEventArgs e)
         {

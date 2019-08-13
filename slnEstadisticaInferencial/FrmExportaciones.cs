@@ -49,8 +49,11 @@ namespace slnEstadisticaInferencial
         }
         private void Refrescar()
         {
+
+            
             // TODO: esta línea de código carga datos en la tabla 'carnesDBDataSet.producciones' Puede moverla o quitarla según sea necesario.
             Models.CarnesContexto contexto = new Models.CarnesContexto();
+
             List<Models.exportaciones> producciones1 = contexto.exportaciones.ToList();           
             exportacionesDataGridView.DataSource = producciones1;
 
@@ -60,6 +63,7 @@ namespace slnEstadisticaInferencial
             FrmManteExportaciones exp = new FrmManteExportaciones();
             exp.accion = 1;
             exp.ShowDialog();
+            Refrescar();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -93,6 +97,7 @@ namespace slnEstadisticaInferencial
             exportaciones ex = ((exportaciones)exportacionesDataGridView.SelectedRows[0].DataBoundItem);
             exp.id = ex.id;
             exp.ShowDialog();
+            Refrescar();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -100,7 +105,7 @@ namespace slnEstadisticaInferencial
             exportaciones ex = ((exportaciones)exportacionesDataGridView.SelectedRows[0].DataBoundItem);
             exportacionesLN exln = new exportacionesLN();
             exln.eliminaExportacion(ex.id);
-            MessageBox.Show("Se elimino correctamente su exportación");
+            MessageBox.Show("Se eliminó correctamente la exportación");
             Refrescar();
         }
 

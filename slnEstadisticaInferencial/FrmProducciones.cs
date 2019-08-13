@@ -92,6 +92,7 @@ namespace slnEstadisticaInferencial
             FrmManteProduccion produccion = new FrmManteProduccion();
             produccion.accion = 1;
             produccion.ShowDialog();
+            Refrescar();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -101,6 +102,7 @@ namespace slnEstadisticaInferencial
             producciones pro = ((producciones)produccionesDataGridView.SelectedRows[0].DataBoundItem);
             produccion.id= pro.id;
             produccion.ShowDialog();
+            Refrescar();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -108,7 +110,7 @@ namespace slnEstadisticaInferencial
             producciones pro = ((producciones)produccionesDataGridView.SelectedRows[0].DataBoundItem);
             ProduccionesLN proln = new ProduccionesLN();
             proln.eliminaProduccion(pro.id);
-            MessageBox.Show("Se elimino correctamente su producción");
+            MessageBox.Show("Se eliminó correctamente la producción");
             Refrescar();
         }
 

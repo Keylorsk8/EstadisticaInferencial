@@ -66,6 +66,7 @@ namespace slnEstadisticaInferencial
             FrmManteCarnes carnes = new FrmManteCarnes();
             carnes.accion = 1;
             carnes.ShowDialog();
+            Refrescar();
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
@@ -75,6 +76,7 @@ namespace slnEstadisticaInferencial
             carnes carnes = ((carnes)carnesDataGridView.SelectedRows[0].DataBoundItem);
             carnes1.id = carnes.id;
             carnes1.ShowDialog();
+            Refrescar();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

@@ -74,6 +74,7 @@ namespace slnEstadisticaInferencial
             FrmManteConsumoPerCapita conP = new FrmManteConsumoPerCapita();
             conP.accion = 1;
             conP.ShowDialog();
+            Refrescar();
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
@@ -83,6 +84,7 @@ namespace slnEstadisticaInferencial
             consumoPerCapita cpc = ((consumoPerCapita)consumoPerCapitaDataGridView.SelectedRows[0].DataBoundItem);
             conP.id = cpc.id;
             conP.ShowDialog();
+            Refrescar();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -90,7 +92,7 @@ namespace slnEstadisticaInferencial
             consumoPerCapita cpc = ((consumoPerCapita)consumoPerCapitaDataGridView.SelectedRows[0].DataBoundItem);
             ConsumoPerCapitaLN cpcln = new ConsumoPerCapitaLN();
             cpcln.eliminaConsumoPerCapita(cpc.id);
-            MessageBox.Show("Se elimino correctamente su Consumo Per Cápita");
+            MessageBox.Show("Se eliminó correctamente el Consumo Per Cápita");
             Refrescar();
         }
 

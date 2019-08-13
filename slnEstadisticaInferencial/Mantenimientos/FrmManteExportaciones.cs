@@ -68,17 +68,54 @@ namespace slnEstadisticaInferencial.Mantenimientos
 
         private void BtnAccion_Click(object sender, EventArgs e)
         {
+
+            string cadena = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-}{[]'/.;";
+            bool dontWork = false;
             if (accion == 1)
             {
-                expLN.GuardarExportacion((int)cmbCarne.SelectedValue, Convert.ToDouble(maskedTextBox1.Text), (int)cmbAnio1.SelectedValue);
-                MessageBox.Show("Se guardo su exportación correctamente");
+                for (int i = 0; i < maskedTextBox1.Text.Length; i++)
+                {
+                    for (int j = 0; j < cadena.Length; j++)
+                    {
+                        if (maskedTextBox1.Text[i].Equals(cadena[j]))
+                        {
+                            dontWork = true;
+                        }
+                    }
+                }
+                if (dontWork)
+                {
+                    MessageBox.Show(null, "Solo se aceptan valores enteros y decimales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    expLN.GuardarExportacion((int)cmbCarne.SelectedValue, Convert.ToDouble(maskedTextBox1.Text), (int)cmbAnio1.SelectedValue);
+                    MessageBox.Show("Se guardó la exportación correctamente");
+                }
             }
             else
             {
                 if (accion == 2)
                 {
-                    expLN.actualizaExportacion(id, (int)cmbCarne.SelectedValue, Convert.ToDouble(maskedTextBox1.Text), (int)cmbAnio1.SelectedValue);
-                    MessageBox.Show("Se actualizo su exportación con exito!");
+                    for (int i = 0; i < maskedTextBox1.Text.Length; i++)
+                    {
+                        for (int j = 0; j < cadena.Length; j++)
+                        {
+                            if (maskedTextBox1.Text[i].Equals(cadena[j]))
+                            {
+                                dontWork = true;
+                            }
+                        }
+                    }
+                    if (dontWork)
+                    {
+                        MessageBox.Show(null, "Solo se aceptan valores enteros y decimales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        expLN.actualizaExportacion(id, (int)cmbCarne.SelectedValue, Convert.ToDouble(maskedTextBox1.Text), (int)cmbAnio1.SelectedValue);
+                        MessageBox.Show("Se actualizó la exportación con éxito!");
+                    }
                 }
             }
             this.Close();

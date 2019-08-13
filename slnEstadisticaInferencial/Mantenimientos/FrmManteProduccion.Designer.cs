@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManteProduccion));
             this.BtnAccion = new System.Windows.Forms.Button();
             this.PnlSideBar = new System.Windows.Forms.Panel();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.cmbCarne = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbAnio1 = new System.Windows.Forms.ComboBox();
             this.LblTitulo = new System.Windows.Forms.Label();
             this.BtnVolver = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.PnlSideBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,11 +50,12 @@
             this.BtnAccion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAccion.ForeColor = System.Drawing.Color.White;
             this.BtnAccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAccion.Location = new System.Drawing.Point(0, 186);
+            this.BtnAccion.Location = new System.Drawing.Point(0, 229);
+            this.BtnAccion.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAccion.Name = "BtnAccion";
-            this.BtnAccion.Size = new System.Drawing.Size(322, 60);
+            this.BtnAccion.Size = new System.Drawing.Size(429, 74);
             this.BtnAccion.TabIndex = 16;
-            this.BtnAccion.Text = "Agregar produccion";
+            this.BtnAccion.Text = "Agregar Producción";
             this.BtnAccion.UseVisualStyleBackColor = false;
             this.BtnAccion.Click += new System.EventHandler(this.BtnAccion_Click);
             // 
@@ -70,18 +71,28 @@
             this.PnlSideBar.Controls.Add(this.BtnVolver);
             this.PnlSideBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnlSideBar.Location = new System.Drawing.Point(0, 0);
+            this.PnlSideBar.Margin = new System.Windows.Forms.Padding(4);
             this.PnlSideBar.Name = "PnlSideBar";
-            this.PnlSideBar.Size = new System.Drawing.Size(322, 186);
+            this.PnlSideBar.Size = new System.Drawing.Size(429, 229);
             this.PnlSideBar.TabIndex = 23;
             this.PnlSideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlSideBar_Paint);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(164, 69);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(132, 22);
+            this.maskedTextBox1.TabIndex = 23;
             // 
             // cmbCarne
             // 
             this.cmbCarne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCarne.FormattingEnabled = true;
-            this.cmbCarne.Location = new System.Drawing.Point(123, 140);
+            this.cmbCarne.Location = new System.Drawing.Point(164, 172);
+            this.cmbCarne.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCarne.Name = "cmbCarne";
-            this.cmbCarne.Size = new System.Drawing.Size(163, 21);
+            this.cmbCarne.Size = new System.Drawing.Size(216, 24);
             this.cmbCarne.TabIndex = 22;
             // 
             // label5
@@ -90,9 +101,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 137);
+            this.label5.Location = new System.Drawing.Point(16, 169);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 24);
+            this.label5.Size = new System.Drawing.Size(97, 33);
             this.label5.TabIndex = 21;
             this.label5.Text = "Carne";
             // 
@@ -102,9 +114,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(10, 52);
+            this.label4.Location = new System.Drawing.Point(13, 64);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 24);
+            this.label4.Size = new System.Drawing.Size(143, 33);
             this.label4.TabIndex = 20;
             this.label4.Text = "Cantidad";
             // 
@@ -112,9 +125,10 @@
             // 
             this.cmbAnio1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAnio1.FormattingEnabled = true;
-            this.cmbAnio1.Location = new System.Drawing.Point(123, 98);
+            this.cmbAnio1.Location = new System.Drawing.Point(164, 121);
+            this.cmbAnio1.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAnio1.Name = "cmbAnio1";
-            this.cmbAnio1.Size = new System.Drawing.Size(163, 21);
+            this.cmbAnio1.Size = new System.Drawing.Size(216, 24);
             this.cmbAnio1.TabIndex = 8;
             // 
             // LblTitulo
@@ -123,9 +137,10 @@
             this.LblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitulo.ForeColor = System.Drawing.Color.White;
-            this.LblTitulo.Location = new System.Drawing.Point(12, 95);
+            this.LblTitulo.Location = new System.Drawing.Point(16, 117);
+            this.LblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(57, 24);
+            this.LblTitulo.Size = new System.Drawing.Size(75, 33);
             this.LblTitulo.TabIndex = 13;
             this.LblTitulo.Text = "Año:";
             // 
@@ -138,29 +153,24 @@
             this.BtnVolver.ForeColor = System.Drawing.Color.White;
             this.BtnVolver.Image = ((System.Drawing.Image)(resources.GetObject("BtnVolver.Image")));
             this.BtnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnVolver.Location = new System.Drawing.Point(14, 12);
+            this.BtnVolver.Location = new System.Drawing.Point(19, 15);
+            this.BtnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.BtnVolver.Name = "BtnVolver";
-            this.BtnVolver.Size = new System.Drawing.Size(116, 31);
+            this.BtnVolver.Size = new System.Drawing.Size(155, 38);
             this.BtnVolver.TabIndex = 0;
             this.BtnVolver.Text = "Volver";
             this.BtnVolver.UseVisualStyleBackColor = true;
             this.BtnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(123, 56);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 23;
-            // 
             // FrmManteProduccion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 246);
+            this.ClientSize = new System.Drawing.Size(429, 303);
             this.Controls.Add(this.PnlSideBar);
             this.Controls.Add(this.BtnAccion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmManteProduccion";
